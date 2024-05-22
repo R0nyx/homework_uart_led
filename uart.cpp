@@ -1,4 +1,4 @@
-// Author: Ronalds Kalnins, rolisrh@gmail.com 
+// Author: R0nyx
 // Date: 22.05.2024
 // MCU: Atmega328p (target)
 
@@ -187,7 +187,7 @@ int process_command(char *buffer) {
               time_index++;
             }
             //execute led command based on extracted commands. aftewrards send "OK"
-            execute_led_on(led_id, time);
+            execute_led_command(led_id, time);
             uart_send_string(messages[0]);
             break;
 
