@@ -1,4 +1,4 @@
-// Author: Ronalds Kalnins, rolisrh@gmail.com 
+// Author: R0nyx
 // Date: 22.05.2024
 // MCU: Atmega328p (target)
 
