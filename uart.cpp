@@ -46,7 +46,6 @@ void init_led(){
   #ifdef LED1
     DDRB |= (1 << LED1);  
   #endif
-  return 0;
 }
 
 void execute_led_command(int led_id, unsigned long time){
@@ -108,7 +107,7 @@ void uart_send_array(uint8_t *data, int len){ //sends byte by byte based on leng
 
 void uart_send_string(uint8_t *text){ 
     int i = 0;
-    while (text[i] != '\r') {
+    while (text[i] != '\r' || text[i] != '\0' ) {
       uart_send_byte(text[i]);
       i++;
       text[i] = message[i]; 
